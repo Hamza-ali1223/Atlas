@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/SamsungSans-Bold.ttf",
+      "sha1": "bf2efc9fb1a0533d9910a0b0cfeb52290bb7a88a"
+    },
+    {
+      "path": "src/assets/fonts/SamsungSans-Light.ttf",
+      "sha1": "3630256d3d3f8afc7f6dc6f096cd877c0ed78ca7"
+    },
+    {
+      "path": "src/assets/fonts/SamsungSans-Medium.ttf",
+      "sha1": "a76cd06f374251f66698831a6a744b0b017c553c"
+    },
+    {
+      "path": "src/assets/fonts/SamsungSans-Regular.ttf",
+      "sha1": "4d912a5f84d3cc776c0f8e99a7f1153a1a4859e8"
+    },
+    {
+      "path": "src/assets/fonts/SamsungSans-Thin.ttf",
+      "sha1": "b8f5282c8dc627535dfda8262a2f33a3a2b7c676"
+    }
+  ]
+}
