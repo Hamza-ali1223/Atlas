@@ -8,6 +8,7 @@ import ErrorPage from './Screens/error'
 import IntroductionScreen from './Screens/reanimatedScreensProject01/animationIntroduction'
 import DesignStudioIntroduction from './Screens/designUiScreensProject02/designStudioIntroduction'
 import designUiIntroScreen from './Screens/designUiScreensProject02/designUiIntroScreen'
+import designUiContactUs from './Screens/designUiScreensProject02/designUiContactUs'
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
        <Stack.Screen name="Error" component={ErrorPage}/>
        <Stack.Screen name='DesignIntro' component={DesignStudioIntroduction} />
        <Stack.Screen name="DesignUiMainIntro" component={designUiIntroScreen} />
+       <Stack.Screen name="DesignUiMainContactUs" component={designUiContactUs} />
       </Stack.Navigator>
     </NavigationContainer>
   )
