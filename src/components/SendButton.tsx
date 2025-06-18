@@ -1,11 +1,17 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { SendIcon } from './Icons'
+import { s, vs } from 'react-native-size-matters'
+import { useNavigation } from '@react-navigation/native'
 
 const SendButton = () => {
+  const Navigation=useNavigation();
   return (
-    <View>
-      <Text>SendButton</Text>
+    <TouchableOpacity onPress={()=>Navigation.navigate("DesignUiMainHome")}>
+      <View style={styles.container}>
+     <SendIcon />
     </View>
+    </TouchableOpacity>
   )
 }
 
@@ -14,8 +20,16 @@ const styles=StyleSheet.create(
     {
         container:
         {
-            flex:1,
             
+            backgroundColor:"#1077AF",
+            width:s(46),
+            height:vs(46),
+            borderRadius:s(23) ,
+          
+            justifyContent:'center',
+            alignItems:"center",
+
+
         }
     }
 )

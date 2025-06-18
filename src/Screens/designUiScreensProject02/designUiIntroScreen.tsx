@@ -39,7 +39,7 @@ const designUiIntroScreen = () => {
     
     return (
     <View style={styles.container}>
-      <Animated.View style={{translateX:translatemoveX}}><FoodLogo /></Animated.View>
+      <Animated.View style={{transform:[{translateX:translatemoveX}]}}><FoodLogo /></Animated.View>
         <Pressable onPress={()=>Navigation.navigate("DesignUiMainContactUs")} >
             <Animated.Text style={[styles.button,{opacity:changeOpacity}]}>Move to Contact Us</Animated.Text>
         </Pressable>
