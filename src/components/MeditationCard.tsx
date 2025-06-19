@@ -12,8 +12,9 @@ import { BlueCamera } from './BlueCamera'
         uriData:string
         title:string
         date:string
+        badgeText:string
     }
-const MeditationCard:FC<meditationProps> = ({uriData,title,date}) => {
+const MeditationCard:FC<meditationProps> = ({uriData,title,date,badgeText}) => {
    
   return (
     <ImageBackground style={styles.container}
@@ -21,8 +22,8 @@ const MeditationCard:FC<meditationProps> = ({uriData,title,date}) => {
     imageStyle={styles.image}
     >
         <View style={styles.overlay}/>
-        <View style={styles.liveBadge}>
-            <Text style={styles.liveBadgeText}>Live</Text>
+        <View style={[styles.liveBadge,badgeText==="Recorded" && {backgroundColor:"#007AFF"}]}>
+            <Text style={styles.liveBadgeText}>{badgeText}</Text>
         </View>
         <View style={styles.cardContent}>
             <Text style={styles.mainText}>{title}</Text>

@@ -10,6 +10,7 @@ import DesignStudioIntroduction from './Screens/designUiScreensProject02/designS
 import designUiIntroScreen from './Screens/designUiScreensProject02/designUiIntroScreen'
 import designUiContactUs from './Screens/designUiScreensProject02/designUiContactUs'
 import designUiHomeScreen from './Screens/designUiScreensProject02/designUiHomeScreen'
+import DesignStudioPayment from './Screens/designUiScreensProject02/DesignStudioPayment'
 
 const App = () => {
 
@@ -18,7 +19,7 @@ const App = () => {
   return (
     <NavigationContainer>
       
-      <Stack.Navigator initialRouteName='DesignUiMainHome' screenOptions={{headerShown:false }}>
+      <Stack.Navigator initialRouteName='Home' screenOptions={{headerShown:false }}>
        <Stack.Screen name='Home' component={Home} options={{headerShown:false}}/>
        <Stack.Screen name="AnimatedHome" component={animationHome} options={{headerTitle:"Animation Palace",
        headerTitleAlign:'center',
@@ -30,6 +31,7 @@ const App = () => {
        <Stack.Screen name="DesignUiMainIntro" component={designUiIntroScreen} />
        <Stack.Screen name="DesignUiMainContactUs" component={designUiContactUs} />
        <Stack.Screen name="DesignUiMainHome" component={designUiHomeScreen}/>
+       <Stack.Screen  name='DesignUiMainPayment' component={DesignStudioPayment} />
       </Stack.Navigator>
     </NavigationContainer>
   )

@@ -1,10 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { FC } from 'react'
 import SocialCircular from './SocialCircular'
 import SendButton from './SendButton'
 import { s, vs } from 'react-native-size-matters'
 
-const SocialSection = ({title}) => {
+interface socialSectionProps
+{
+  title:string
+}
+
+const SocialSection:FC<socialSectionProps> = ({title}) => {
   return (
     <View style={styles.container}>
       <SocialCircular iconName={title}/>

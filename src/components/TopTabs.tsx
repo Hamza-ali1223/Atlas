@@ -5,20 +5,29 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { s, vs } from 'react-native-size-matters';
 
-const TAB_ARRAY = ['Live', 'Recorded'];
+
 const Tab_ACTIVEBG = '#75563B';
 
-const TopTabs = () => {
+interface TopTabsProps
+{
+  tab_array:string[]
+  changebadgeLabel:(data:string) => void
+}
+const TopTabs:FC<TopTabsProps> = ({tab_array,changebadgeLabel}) => {
   const [activeTabs, setactiveTabs] = useState('Live');
 
+  useEffect(()=>
+  {
+    changebadgeLabel(activeTabs)
+  })
  
 
   return (
     <View style={styles.container}>
-      {TAB_ARRAY.map(tabName => {
+      {tab_array.map(tabName => {
         
         const isActive=activeTabs==tabName
         return (

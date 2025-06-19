@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native'
 const SendButton = () => {
   const Navigation=useNavigation();
   return (
-    <TouchableOpacity onPress={()=>Navigation.navigate("DesignUiMainHome")}>
+    <TouchableOpacity onPress={()=>Navigation.navigate("DesignUiMainPayment")}>
       <View style={styles.container}>
      <SendIcon />
     </View>
