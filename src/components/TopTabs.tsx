@@ -23,6 +23,7 @@ const TopTabs = () => {
         const isActive=activeTabs==tabName
         return (
           <TouchableOpacity 
+          key={tabName}
           onPress={()=>setactiveTabs(tabName)}
             style={[
               styles.tabButton,
@@ -56,6 +57,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: s(8),
     paddingHorizontal:s(14),
+    marginHorizontal:s(5),
+    
   },
   buttonText: {
     fontSize: 14,

@@ -1,12 +1,23 @@
-import { ImageBackground, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Dimensions, ImageBackground, StyleSheet, Text, View } from 'react-native'
+import React, { FC } from 'react'
 import { vs, s } from 'react-native-size-matters'
 import { BlueCamera } from './BlueCamera'
 
-const MeditationCard = () => {
+
+ const phoneWidth:number|any=Dimensions.get('window').width
+    const cardWidth=(((phoneWidth-s(16)*3))/2)
+
+    interface meditationProps
+    {
+        uriData:string
+        title:string
+        date:string
+    }
+const MeditationCard:FC<meditationProps> = ({uriData,title,date}) => {
+   
   return (
     <ImageBackground style={styles.container}
-    source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJzKSUVj44csrOZBkdYBQ05SdqutsE71OjbA&s"}} 
+    source={{uri:uriData}} 
     imageStyle={styles.image}
     >
         <View style={styles.overlay}/>
@@ -14,10 +25,10 @@ const MeditationCard = () => {
             <Text style={styles.liveBadgeText}>Live</Text>
         </View>
         <View style={styles.cardContent}>
-            <Text style={styles.mainText}>Meditations</Text>
+            <Text style={styles.mainText}>{title}</Text>
             <View style={{flexDirection:'row',alignItems:'center'}}>
                 <BlueCamera />
-                <Text style={{color:"white",marginStart:s(10)}}> 31st Jan - 9.00 am</Text>
+                <Text style={{color:"white",marginStart:s(10)}}> {date}</Text>
             </View>
         </View>
         
@@ -33,7 +44,7 @@ const styles = StyleSheet.create(
         container:
         {
             height:vs(161),
-            width:s(166),
+            width:cardWidth,
             borderRadius:s(12),
             marginTop:vs(5),
             overflow:'hidden'
@@ -78,6 +89,6 @@ const styles = StyleSheet.create(
         {
                 fontSize:11,
                 fontWeight:'semibold',
-                color:'white',
+                color:'white'
         },
     })

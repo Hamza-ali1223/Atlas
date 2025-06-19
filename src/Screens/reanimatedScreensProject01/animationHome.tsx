@@ -7,6 +7,7 @@ import { Colors } from '../../colors'
 
 
 
+
 const animationHome = () => {
 
     const changeOpacity=useRef(new Animated.Value(1)).current
