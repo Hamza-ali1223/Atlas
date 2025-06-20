@@ -153,7 +153,7 @@ const designTokens = {
             ]}
             onPress={() => navigation.navigate('Home')}
           >
-            <Text style={styles.buttonText}>Back to Atlas</Text>
+            <Text style={styles.buttonText}>Back</Text>
           </Pressable>
           <Pressable
             style={({ pressed }) => [

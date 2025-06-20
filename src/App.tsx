@@ -19,7 +19,7 @@ const App = () => {
   return (
     <NavigationContainer>
       
-      <Stack.Navigator initialRouteName='Home' screenOptions={{headerShown:false }}>
+      <Stack.Navigator initialRouteName='DesignUiMainPayment' screenOptions={{headerShown:false }}>
        <Stack.Screen name='Home' component={Home} options={{headerShown:false}}/>
        <Stack.Screen name="AnimatedHome" component={animationHome} options={{headerTitle:"Animation Palace",
        headerTitleAlign:'center',

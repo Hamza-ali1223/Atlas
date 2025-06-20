@@ -207,7 +207,7 @@ const bgColor = colorAnim.interpolate({
             ]}
             onPress={() => navigation.navigate('Home')}
           >
-            <Text style={styles.buttonText}>Back to Atlas</Text>
+            <Text style={styles.buttonText}>Back {` `}</Text>
           </Pressable>
           <Pressable
             style={({ pressed }) => [
@@ -278,13 +278,15 @@ const styles = StyleSheet.create({
     color: Colors.accent,
     textAlign: 'center',
   },
-  buttonContainer: { flexDirection: 'row', justifyContent: 'space-between' },
+  buttonContainer: { flexDirection: 'row', justifyContent: 'space-around' },
   button: {
-    flex: 0.45,
+    
     paddingVertical: 12,
+    paddingHorizontal:55,
     borderRadius: 8,
     alignItems: 'center',
     elevation: 2,
+    minWidth:80,
   },
   buttonText: { color: Colors.white, fontSize: 20, fontWeight: '600' },
 });
