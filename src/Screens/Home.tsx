@@ -29,6 +29,12 @@ const Home = () => {
       id:3,
       name:'OnboardingUiIntroduction',
       value:'3-Screen Onboarding Ui'
+    },
+    4:
+    {
+      id:4,
+      name:'learningOnboarding1',
+      value:'E-Learning App Onboarding'
     }
   };
 
@@ -44,6 +50,10 @@ const Home = () => {
         case 'OnboardingUiIntroduction':
           Navigation.navigate('OnboardingUiIntroduction');
           break;
+
+      case 'learningOnboarding1':
+        Navigation.navigate("learningOnboarding1");
+        break;
       default:
         Navigation.navigate('Error');
     }
