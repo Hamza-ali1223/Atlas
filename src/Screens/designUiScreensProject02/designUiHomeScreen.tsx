@@ -1,16 +1,17 @@
-import { FlatList, SafeAreaView, StyleSheet, Text } from 'react-native';
+import { FlatList, Pressable, SafeAreaView, StyleSheet, Text } from 'react-native';
 import React, { useState } from 'react';
 import { s, vs } from 'react-native-size-matters';
 import TopTabs from '../../components/TopTabs';
 import MeditationCard from '../../components/MeditationCard';
 import { dummyData } from '../../data/dummyData';
 import { useSafeAreaFrame } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
 
 const designUiHomeScreen = () => {
   const TAB_ARRAY = ['Live', 'Recorded'];
 
   const [activeTab, setactiveTab] = useState<string>('Live');
-
+  const Navigation=useNavigation();
   const changebadgeLabel = (activeTabvalue: string) => {
     setactiveTab(activeTabvalue);
   };
@@ -34,12 +35,14 @@ const designUiHomeScreen = () => {
         data={dummyData}
         keyExtractor={item => item.id}
         renderItem={item => (
-          <MeditationCard
+          <Pressable onPress={()=>Navigation.navigate("DesignUiMainPayment")}>
+            <MeditationCard
             badgeText={activeTab}
             uriData={item.item.image}
             date={item.item.date}
             title={item.item.title}
           />
+          </Pressable>
         )}
         showsVerticalScrollIndicator={false}
         numColumns={2}
