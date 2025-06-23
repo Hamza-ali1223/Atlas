@@ -11,6 +11,8 @@ import designUiIntroScreen from './Screens/designUiScreensProject02/designUiIntr
 import designUiContactUs from './Screens/designUiScreensProject02/designUiContactUs'
 import designUiHomeScreen from './Screens/designUiScreensProject02/designUiHomeScreen'
 import DesignStudioPayment from './Screens/designUiScreensProject02/DesignStudioPayment'
+import OnboardingUiIntroduction from './Screens/onboardingUiScreensProject03/onboardingUiIntroduction'
+import onboardingScreenUiHome from './Screens/onboardingUiScreensProject03/onboardingScreenUiHome'
 
 const App = () => {
 
@@ -19,7 +21,7 @@ const App = () => {
   return (
     <NavigationContainer>
       
-      <Stack.Navigator initialRouteName='DesignUiMainPayment' screenOptions={{headerShown:false }}>
+      <Stack.Navigator initialRouteName='Home' screenOptions={{headerShown:false }}>
        <Stack.Screen name='Home' component={Home} options={{headerShown:false}}/>
        <Stack.Screen name="AnimatedHome" component={animationHome} options={{headerTitle:"Animation Palace",
        headerTitleAlign:'center',
@@ -32,6 +34,8 @@ const App = () => {
        <Stack.Screen name="DesignUiMainContactUs" component={designUiContactUs} />
        <Stack.Screen name="DesignUiMainHome" component={designUiHomeScreen}/>
        <Stack.Screen  name='DesignUiMainPayment' component={DesignStudioPayment} />
+       <Stack.Screen name='OnboardingUiIntroduction' component={OnboardingUiIntroduction} />
+       <Stack.Screen name='OnboardingUiHome' component={onboardingScreenUiHome} />
       </Stack.Navigator>
     </NavigationContainer>
   )

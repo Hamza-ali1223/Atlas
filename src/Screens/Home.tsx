@@ -24,6 +24,12 @@ const Home = () => {
       name: 'DesignIntro',
       value: 'Mastering Ui Design Course',
     },
+    3:
+    {
+      id:3,
+      name:'OnboardingUiIntroduction',
+      value:'3-Screen Onboarding Ui'
+    }
   };
 
   const navigateFlatList = item => {
@@ -35,6 +41,9 @@ const Home = () => {
       case 'DesignIntro':
         Navigation.navigate('DesignIntro');
         break;
+        case 'OnboardingUiIntroduction':
+          Navigation.navigate('OnboardingUiIntroduction');
+          break;
       default:
         Navigation.navigate('Error');
     }

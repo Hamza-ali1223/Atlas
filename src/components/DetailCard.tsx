@@ -5,7 +5,7 @@ const DetailCard = ({cardNumber,CVC,expiryDate}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Card Number: {cardNumber}</Text>
-      <Text style={styles.label}>CVC:23423: {CVC}</Text>
+      <Text style={styles.label}>CVC: {CVC}</Text>
       <Text style={styles.label}>Expiry Date: {expiryDate}</Text>
     </View>
   );
